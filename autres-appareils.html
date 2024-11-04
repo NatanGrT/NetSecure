@@ -1,0 +1,253 @@
+<!-- autres_appareils.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
+    <title>Lexique des Autres Appareils - NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(180deg, #0072ff, #ffffff);
+            background-attachment: fixed;
+        }
+
+        /* Bande noire en haut avec menu fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0d1117;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titre et navigation centrés dans la bande noire */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Style pour le titre du site avec logo */
+        .site-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin: 0;
+        }
+
+        /* Style pour le logo */
+        .site-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #00c6ff;
+        }
+
+        /* Style pour les sous-menus */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 8px;
+            display: block;
+        }
+
+        .submenu li a:hover {
+            background-color: #0072ff;
+        }
+
+        /* Section d'introduction */
+        .introduction {
+            text-align: center;
+            padding: 100px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        /* Styles pour les sections de contenu */
+        .content {
+            padding: 120px 20px;
+            max-width: 1000px;
+            margin: auto;
+            color: #333;
+        }
+
+        .device-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .device-section h2 {
+            color: #0072ff;
+        }
+    </style>
+</head>
+<header>
+    <div class="header-content">
+        <div class="site-title-container">
+            <!-- Logo du site -->
+            <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+            <h1 class="site-title">NetSecure</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a href="#">Connaissances</a>
+                    <ul class="submenu">
+                        <li><a href="concept.html">Concepts généraux</a></li>
+                        <li><a href="protocole.html">Protocoles réseau</a></li>
+                        <li><a href="types_connexion.html">Types de connexion</a></li>
+                        <li><a href="tech.html">Technologies de sécurité</a></li>
+                        <li><a href="type.html">Types de cyberattaques</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ip.html">Adresses IP</a>
+                    <ul class="submenu">
+                        <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                        <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                        <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                        <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Outils</a>
+                    <ul class="submenu">
+                        <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                        <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pratiques</a>
+                    <ul class="submenu">
+                        <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                        <li><a href="lexique.html">Lexique des abréviations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ressources</a>
+                    <ul class="submenu">
+                        <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Appareils</a>
+                    <ul class="submenu">
+                        <li><a href="routeurs.html">Routeurs</a></li>
+                        <li><a href="switches.html">Switches</a></li>
+                        <li><a href="parefeux.html">Pare-feux</a></li>
+                        <li><a href="serveurs.html">Serveurs</a></li>
+                        <li><a href="autres-appareils.html">Autres appareils</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <div class="device-section">
+            <h2>Routeur</h2>
+            <p>Un routeur est un dispositif qui dirige le trafic entre différents réseaux, en utilisant des tables de routage pour déterminer le meilleur chemin pour les données.</p>
+        </div>
+        <div class="device-section">
+            <h2>Switch</h2>
+            <p>Un switch est un appareil réseau qui connecte plusieurs dispositifs sur un réseau local (LAN) et utilise des adresses MAC pour envoyer des données uniquement aux appareils concernés.</p>
+        </div>
+        <div class="device-section">
+            <h2>Modem</h2>
+            <p>Un modem est un appareil qui module et démodule les signaux pour permettre la transmission de données sur des lignes téléphoniques ou des connexions Internet.</p>
+        </div>
+        <div class="device-section">
+            <h2>Point d'accès sans fil (AP)</h2>
+            <p>Un point d'accès est un appareil qui permet aux dispositifs sans fil de se connecter à un réseau câblé, étendant ainsi la portée du réseau.</p>
+        </div>
+        <div class="device-section">
+            <h2>Extendeur de portée</h2>
+            <p>Un extendeur de portée est un dispositif qui amplifie le signal d'un réseau sans fil pour étendre sa couverture dans des zones où le signal est faible.</p>
+        </div>
+        <div class="device-section">
+            <h2>Switch de couche 3</h2>
+            <p>Un switch de couche 3 combine les fonctionnalités d'un switch et d'un routeur, permettant le routage entre différents réseaux tout en offrant des fonctionnalités de commutation.</p>
+        </div>
+        <div class="device-section">
+            <h2>Bridge (Pont)</h2>
+            <p>Un bridge est un dispositif qui connecte deux segments de réseau, filtrant le trafic et réduisant les collisions en séparant les domaines de collision.</p>
+        </div>
+        <div class="device-section">
+            <h2>Load Balancer (Équilibreur de charge)</h2>
+            <p>Un équilibreur de charge distribue le trafic réseau sur plusieurs serveurs pour optimiser l'utilisation des ressources, améliorer la performance et assurer la disponibilité.</p>
+        </div>
+        <div class="device-section">
+            <h2>Firewall (Pare-feu)</h2>
+            <p>Un pare-feu est un système de sécurité réseau qui surveille et contrôle le trafic réseau entrant et sortant selon des règles de sécurité prédéfinies.</p>
+        </div>
+        <div class="device-section">
+            <h2>Dispositif IoT (Internet des Objets)</h2>
+            <p>Des appareils connectés à Internet qui collectent et échangent des données, tels que des capteurs, des thermostats intelligents et des appareils électroménagers connectés.</p>
+        </div>
+    </div>
+</body>
+</html>

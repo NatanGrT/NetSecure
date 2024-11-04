@@ -1,0 +1,253 @@
+<!-- configuration_adresses_ip.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
+    <title>Configuration des Adresses IP - NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(180deg, #0072ff, #ffffff);
+            background-attachment: fixed;
+        }
+
+        /* Bande noire en haut avec menu fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0d1117;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titre et navigation centrés dans la bande noire */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Style pour le titre du site avec logo */
+        .site-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin: 0;
+        }
+
+        /* Style pour le logo */
+        .site-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #00c6ff;
+        }
+
+        /* Style pour les sous-menus */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 8px;
+            display: block;
+        }
+
+        .submenu li a:hover {
+            background-color: #0072ff;
+        }
+
+        /* Section d'introduction */
+        .introduction {
+            text-align: center;
+            padding: 100px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        /* Styles pour les sections de contenu */
+        .content {
+            padding: 120px 20px;
+            max-width: 1000px;
+            margin: auto;
+            color: #333;
+        }
+
+        .ip-config-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .ip-config-section h2 {
+            color: #0072ff;
+        }
+    </style>
+</head>
+<header>
+    <div class="header-content">
+        <div class="site-title-container">
+            <!-- Logo du site -->
+            <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+            <h1 class="site-title">NetSecure</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a href="#">Connaissances</a>
+                    <ul class="submenu">
+                        <li><a href="concept.html">Concepts généraux</a></li>
+                        <li><a href="protocole.html">Protocoles réseau</a></li>
+                        <li><a href="types_connexion.html">Types de connexion</a></li>
+                        <li><a href="tech.html">Technologies de sécurité</a></li>
+                        <li><a href="type.html">Types de cyberattaques</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ip.html">Adresses IP</a>
+                    <ul class="submenu">
+                        <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                        <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                        <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                        <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Outils</a>
+                    <ul class="submenu">
+                        <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                        <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pratiques</a>
+                    <ul class="submenu">
+                        <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                        <li><a href="lexique.html">Lexique des abréviations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ressources</a>
+                    <ul class="submenu">
+                        <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Appareils</a>
+                    <ul class="submenu">
+                        <li><a href="routeurs.html">Routeurs</a></li>
+                        <li><a href="switches.html">Switches</a></li>
+                        <li><a href="parefeux.html">Pare-feux</a></li>
+                        <li><a href="serveurs.html">Serveurs</a></li>
+                        <li><a href="autres-appareils.html">Autres appareils</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <div class="ip-config-section">
+            <h2>Qu'est-ce qu'une Adresse IP ?</h2>
+            <p>Une adresse IP (Internet Protocol) est un identifiant unique pour chaque appareil connecté à un réseau. Elle permet de communiquer et de localiser les appareils sur Internet ou sur un réseau local.</p>
+        </div>
+        <div class="ip-config-section">
+            <h2>Types d'Adresses IP</h2>
+            <ul>
+                <li><strong>Adresse IP publique :</strong> Identifie un appareil sur Internet.</li>
+                <li><strong>Adresse IP privée :</strong> Utilisée pour identifier des appareils au sein d'un réseau interne.</li>
+                <li><strong>Adresse IP dynamique :</strong> Assignée automatiquement par le DHCP et peut changer périodiquement.</li>
+                <li><strong>Adresse IP statique :</strong> Attribuée manuellement et reste fixe.</li>
+            </ul>
+        </div>
+        <div class="ip-config-section">
+            <h2>Configuration Automatique (DHCP)</h2>
+            <p>La configuration DHCP (Dynamic Host Configuration Protocol) permet d’attribuer automatiquement des adresses IP aux appareils connectés au réseau. C’est un choix populaire pour les réseaux domestiques et d’entreprise, car il réduit la complexité de gestion.</p>
+        </div>
+        <div class="ip-config-section">
+            <h2>Configuration Manuelle (IP Statique)</h2>
+            <p>Une adresse IP statique est configurée manuellement et ne change pas. Elle est souvent utilisée pour les serveurs, les imprimantes réseau, ou d’autres appareils qui doivent avoir une adresse fixe.</p>
+            <p>Pour configurer une adresse IP statique, les paramètres suivants sont nécessaires :</p>
+            <ul>
+                <li><strong>Adresse IP :</strong> L’adresse spécifique assignée à l’appareil.</li>
+                <li><strong>Masque de sous-réseau :</strong> Utilisé pour déterminer la partie réseau de l’adresse IP.</li>
+                <li><strong>Passerelle par défaut :</strong> Adresse IP de l'appareil qui permet la connexion avec d'autres réseaux.</li>
+                <li><strong>Serveur DNS :</strong> Serveurs permettant la résolution des noms de domaine en adresses IP.</li>
+            </ul>
+        </div>
+        <div class="ip-config-section">
+            <h2>Exemple de Configuration d'une IP Statique</h2>
+            <p>Pour configurer une IP statique sur un réseau local :</p>
+            <ol>
+                <li>Accédez aux paramètres réseau de votre appareil.</li>
+                <li>Sélectionnez "Manuel" ou "Statique" dans les options IP.</li>
+                <li>Entrez l'adresse IP souhaitée (ex. 192.168.1.10).</li>
+                <li>Ajoutez le masque de sous-réseau (ex. 255.255.255.0).</li>
+                <li>Ajoutez la passerelle par défaut (ex. 192.168.1.1).</li>
+                <li>Indiquez les serveurs DNS (ex. 8.8.8.8 pour Google DNS).</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

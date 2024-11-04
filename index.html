@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png"> <!-- Chemin du favicon mis à jour -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <title>NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(180deg, #0072ff, #ffffff);
+    background-attachment: fixed;
+}
+
+/* Bande noire en haut avec menu fixe */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0d1117;
+    z-index: 10;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre et navigation centrés dans la bande noire */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Style pour le titre du site avec logo */
+.site-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-title {
+    font-size: 2.5em;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 0;
+}
+
+/* Style pour le logo */
+.site-logo {
+    width: 40px; /* Taille du logo, ajustable selon le besoin */
+    height: 40px;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+/* Style pour les sous-menus */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 8px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #0072ff;
+}
+
+/* Section d'introduction */
+.introduction {
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 100px auto 0; /* Laisser de l'espace sous la barre de navigation */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Section des fonctionnalités */
+.features {
+    max-width: 1200px;
+    margin: 50px auto; /* Centre horizontalement */
+    padding: 20px;
+    display: flex; /* Flexbox pour l'alignement */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: space-around; /* Aligne les éléments sur toute la largeur */
+}
+
+.feature {
+    background-color: white; /* Fond blanc pour chaque carte */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour le relief */
+    padding: 20px; /* Espacement interne */
+    margin: 10px; /* Espacement entre les cartes */
+    flex: 0 1 300px; /* Taille minimum de la carte */
+    transition: transform 0.3s; /* Animation pour l'effet de survol */
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.feature h3 {
+    color: #0072ff; /* Titre en bleu */
+    font-size: 1.5em; /* Taille du texte pour le titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+.feature p {
+    color: black; /* Texte en noir */
+    font-size: 1em; /* Taille du texte */
+    line-height: 1.5; /* Hauteur de ligne pour la lisibilité */
+}
+
+/* Footer pour ajouter du contenu supplémentaire */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d1117;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Bande noire fixe en haut avec le titre et le menu -->
+    <header>
+        <div class="header-content">
+            <div class="site-title-container">
+                <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+                <h1 class="site-title">NetSecure</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>
+                        <a href="#">Connaissances</a>
+                        <ul class="submenu">
+                            <li><a href="concept.html">Concepts généraux</a></li>
+                            <li><a href="protocole.html">Protocoles réseau</a></li>
+                            <li><a href="types_connexion.html">Types de connexion</a></li>
+                            <li><a href="tech.html">Technologies de sécurité</a></li>
+                            <li><a href="type.html">Types de cyberattaques</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ip.html">Adresses IP</a>
+                        <ul class="submenu">
+                            <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                            <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                            <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                            <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Outils</a>
+                        <ul class="submenu">
+                            <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                            <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pratiques</a>
+                        <ul class="submenu">
+                            <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                            <li><a href="lexique.html">Lexique des abréviations</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Ressources</a>
+                        <ul class="submenu">
+                            <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Appareils</a>
+                        <ul class="submenu">
+                            <li><a href="routeurs.html">Routeurs</a></li>
+                            <li><a href="switches.html">Switches</a></li>
+                            <li><a href="parefeux.html">Pare-feux</a></li>
+                            <li><a href="serveurs.html">Serveurs</a></li>
+                            <li><a href="autres-appareils.html">Autres appareils</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="introduction">
+        <h2>Bienvenue sur NetSecure</h2>
+        <p>Votre ressource ultime pour tout ce qui concerne la sécurité des réseaux et des systèmes. Explorez les meilleures pratiques, apprenez les concepts essentiels et découvrez les outils indispensables pour sécuriser vos connexions.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Connaissances</h3>
+            <p>Plongez dans l’univers de la sécurité des réseaux avec des articles informatifs sur les concepts essentiels. Apprenez les théories de base, les protocoles et les technologies qui façonnent notre compréhension des réseaux modernes.</p>
+        </div>
+        <div class="feature">
+            <h3>Adresses IP</h3>
+            <p>Comprenez l'importance des adresses IP et leur rôle dans la communication réseau. Explorez les différents types d'adresses, apprenez à calculer des masques de sous-réseau et à configurer des adresses IP pour optimiser la sécurité et l'efficacité de vos connexions.</p>
+        </div>
+        <div class="feature">
+            <h3>Outils</h3>
+            <p>Accédez à une gamme d'outils et de logiciels de sécurité qui vous aideront à analyser et à protéger vos réseaux. Des solutions de détection d'intrusions aux outils d'audit, cette section vous guide vers les meilleures ressources pour renforcer votre sécurité informatique.</p>
+        </div>
+        <div class="feature">
+            <h3>Pratiques</h3>
+            <p>Découvrez des conseils pratiques et des stratégies éprouvées pour sécuriser vos systèmes. Apprenez à mettre en œuvre des mesures de sécurité simples mais efficaces pour protéger vos données contre les cybermenaces.</p>
+        </div>
+        <div class="feature">
+            <h3>Ressources</h3>
+            <p>Explorez une sélection de ressources utiles, y compris des entreprises leaders et des solutions innovantes dans le domaine de la sécurité des réseaux. Cette section vous aidera à naviguer dans le paysage complexe des technologies de sécurité.</p>
+        </div>
+        <div class="feature">
+            <h3>Appareils</h3>
+            <p>Familiarisez-vous avec les différents appareils utilisés dans les réseaux modernes, tels que les routeurs, les switches et les pare-feux. Comprenez leur fonctionnement et leur importance pour la sécurité et l'efficacité de vos infrastructures réseau.</p>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

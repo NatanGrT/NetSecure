@@ -1,0 +1,85 @@
+/* Style de fond inspiré de l'image */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #0d1117;
+    background-image: url('image/fond.png'); /* image fournie en arrière-plan */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Titre du site avec dégradé */
+.site-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: transparent;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+/* Style pour les sous-menus */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 8px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #0072ff;
+}
+
+/* Section d'introduction */
+.introduction {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}

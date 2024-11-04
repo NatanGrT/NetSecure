@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
+    <title>Protocoles réseau - NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(180deg, #0072ff, #ffffff);
+            background-attachment: fixed;
+        }
+
+        /* Bande noire en haut avec menu fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0d1117;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titre et navigation centrés dans la bande noire */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Style pour le titre du site avec logo */
+        .site-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin: 0;
+        }
+
+        /* Style pour le logo */
+        .site-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #00c6ff;
+        }
+
+        /* Style pour les sous-menus */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 8px;
+            display: block;
+        }
+
+        .submenu li a:hover {
+            background-color: #0072ff;
+        }
+
+        /* Section d'introduction */
+        .introduction {
+            text-align: center;
+            padding: 100px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        /* Styles pour les sections de contenu */
+        .content {
+            padding: 120px 20px;
+            max-width: 1000px;
+            margin: auto;
+            color: #333;
+        }
+
+        .protocol-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .protocol-section h2 {
+            color: #0072ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="site-title-container">
+                <!-- Logo du site -->
+                <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+                <h1 class="site-title">NetSecure</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>
+                        <a href="#">Connaissances</a>
+                        <ul class="submenu">
+                            <li><a href="concept.html">Concepts généraux</a></li>
+                            <li><a href="protocole.html">Protocoles réseau</a></li>
+                            <li><a href="types_connexion.html">Types de connexion</a></li>
+                            <li><a href="tech.html">Technologies de sécurité</a></li>
+                            <li><a href="type.html">Types de cyberattaques</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ip.html">Adresses IP</a>
+                        <ul class="submenu">
+                            <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                            <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                            <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                            <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Outils</a>
+                        <ul class="submenu">
+                            <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                            <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pratiques</a>
+                        <ul class="submenu">
+                            <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                            <li><a href="lexique.html">Lexique des abréviations</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Ressources</a>
+                        <ul class="submenu">
+                            <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Appareils</a>
+                        <ul class="submenu">
+                            <li><a href="routeurs.html">Routeurs</a></li>
+                            <li><a href="switches.html">Switches</a></li>
+                            <li><a href="parefeux.html">Pare-feux</a></li>
+                            <li><a href="serveurs.html">Serveurs</a></li>
+                            <li><a href="autres-appareils.html">Autres appareils</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main class="content">
+    <section class="protocol-section">
+        <h2>Protocoles de Transport</h2>
+        <ul>
+            <li><strong>TCP (Transmission Control Protocol)</strong>: Protocole de transport fiable, utilisé pour des connexions stables.</li>
+            <li><strong>UDP (User Datagram Protocol)</strong>: Protocole de transport rapide, utilisé pour les transmissions sans garantie de livraison.</li>
+        </ul>
+    </section>
+
+    <section class="protocol-section">
+        <h2>Protocoles Internet</h2>
+        <ul>
+            <li><strong>IP (Internet Protocol)</strong>: Fournit des adresses pour les appareils connectés et la livraison de paquets.</li>
+            <li><strong>ICMP (Internet Control Message Protocol)</strong>: Utilisé pour les diagnostics réseau, tel que le ping.</li>
+            <li><strong>ARP (Address Resolution Protocol)</strong>: Associe les adresses IP aux adresses MAC pour la communication sur le réseau local.</li>
+        </ul>
+    </section>
+
+    <section class="protocol-section">
+        <h2>Protocoles Web</h2>
+        <ul>
+            <li><strong>HTTP (HyperText Transfer Protocol)</strong>: Protocole utilisé pour le transfert de données sur le Web.</li>
+            <li><strong>HTTPS (HTTP Secure)</strong>: Version sécurisée de HTTP, qui chiffre les données via SSL/TLS.</li>
+        </ul>
+    </section>
+
+    <section class="protocol-section">
+        <h2>Protocoles de Messagerie</h2>
+        <ul>
+            <li><strong>SMTP (Simple Mail Transfer Protocol)</strong>: Protocole d'envoi de courriels.</li>
+            <li><strong>POP3 (Post Office Protocol 3)</strong>: Récupération des courriels depuis un serveur.</li>
+            <li><strong>IMAP (Internet Message Access Protocol)</strong>: Récupération et gestion des courriels stockés sur le serveur.</li>
+        </ul>
+    </section>
+
+    <section class="protocol-section">
+        <h2>Protocoles de Sécurité</h2>
+        <ul>
+            <li><strong>SSL/TLS (Secure Sockets Layer / Transport Layer Security)</strong>: Protocole de sécurisation des échanges via le chiffrement.</li>
+            <li><strong>SSH (Secure Shell)</strong>: Protocole pour l'accès sécurisé à distance.</li>
+            <li><strong>IPsec (Internet Protocol Security)</strong>: Suite de protocoles sécurisant les échanges au niveau IP.</li>
+        </ul>
+    </section>
+
+    <section class="protocol-section">
+        <h2>Protocoles de Réseau Local</h2>
+        <ul>
+            <li><strong>DHCP (Dynamic Host Configuration Protocol)</strong>: Attribution automatique d'adresses IP.</li>
+            <li><strong>DNS (Domain Name System)</strong>: Résolution des noms de domaine en adresses IP.</li>
+        </ul>
+    </section>
+</main>
+</body>
+</html>

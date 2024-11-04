@@ -1,0 +1,397 @@
+<!-- lexique.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
+    <title>Lexique des abréviations - NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(180deg, #0072ff, #ffffff);
+            background-attachment: fixed;
+        }
+
+        /* Bande noire en haut avec menu fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0d1117;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titre et navigation centrés dans la bande noire */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Style pour le titre du site avec logo */
+        .site-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin: 0;
+        }
+
+        /* Style pour le logo */
+        .site-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #00c6ff;
+        }
+
+        /* Style pour les sous-menus */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 8px;
+            display: block;
+        }
+
+        .submenu li a:hover {
+            background-color: #0072ff;
+        }
+
+        /* Section d'introduction */
+        .introduction {
+            text-align: center;
+            padding: 100px 20px 50px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        /* Styles pour les sections de contenu */
+        .content {
+            padding: 120px 20px;
+            max-width: 1000px;
+            margin: auto;
+            color: #333;
+        }
+
+        .protocol-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .protocol-section h2 {
+            color: #0072ff;
+        }
+    </style>
+</head>
+<header>
+    <div class="header-content">
+        <div class="site-title-container">
+            <!-- Logo du site -->
+            <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+            <h1 class="site-title">NetSecure</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a href="#">Connaissances</a>
+                    <ul class="submenu">
+                        <li><a href="concept.html">Concepts généraux</a></li>
+                        <li><a href="protocole.html">Protocoles réseau</a></li>
+                        <li><a href="types_connexion.html">Types de connexion</a></li>
+                        <li><a href="tech.html">Technologies de sécurité</a></li>
+                        <li><a href="type.html">Types de cyberattaques</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ip.html">Adresses IP</a>
+                    <ul class="submenu">
+                        <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                        <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                        <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                        <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Outils</a>
+                    <ul class="submenu">
+                        <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                        <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pratiques</a>
+                    <ul class="submenu">
+                        <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                        <li><a href="lexique.html">Lexique des abréviations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ressources</a>
+                    <ul class="submenu">
+                        <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Appareils</a>
+                    <ul class="submenu">
+                        <li><a href="routeurs.html">Routeurs</a></li>
+                        <li><a href="switches.html">Switches</a></li>
+                        <li><a href="parefeux.html">Pare-feux</a></li>
+                        <li><a href="serveurs.html">Serveurs</a></li>
+                        <li><a href="autres-appareils.html">Autres appareils</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <div class="protocol-section">
+            <h2>AI</h2>
+            <p>Intelligence Artificielle (Artificial Intelligence). Système informatique capable de réaliser des tâches qui nécessitent normalement l'intelligence humaine.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>API</h2>
+            <p>Interface de Programmation d'Applications (Application Programming Interface). Ensemble de règles permettant aux programmes de communiquer entre eux.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>BYOD</h2>
+            <p>Apportez votre propre appareil (Bring Your Own Device). Politique qui permet aux employés d'utiliser leurs propres appareils pour accéder aux ressources de l'entreprise.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>CIA</h2>
+            <p>Confidentialité, Intégrité, Disponibilité (Confidentiality, Integrity, Availability). Principes fondamentaux de la sécurité de l'information.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>CISO</h2>
+            <p>Directeur de la Sécurité de l'Information (Chief Information Security Officer). Responsable de la sécurité de l'information au sein d'une organisation.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>DB</h2>
+            <p>Base de Données (Database). Ensemble structuré d'informations stockées électroniquement.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>DLP</h2>
+            <p>Prévention de la Perte de Données (Data Loss Prevention). Stratégies et outils pour empêcher le vol ou la perte d'informations sensibles.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>DHCP</h2>
+            <p>Protocole de Configuration Dynamique des Hôtes (Dynamic Host Configuration Protocol). Protocole réseau qui attribue automatiquement des adresses IP aux appareils sur un réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>DNS</h2>
+            <p>Système de Noms de Domaine (Domain Name System). Système qui traduit les noms de domaine en adresses IP.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>FIM</h2>
+            <p>Surveillance de l'Intégrité des Fichiers (File Integrity Monitoring). Technique pour détecter des modifications non autorisées dans les fichiers.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>Firewalls</h2>
+            <p>Un système de sécurité qui contrôle le trafic entrant et sortant d'un réseau pour prévenir les intrusions.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>FTP</h2>
+            <p>Protocole de Transfert de Fichiers (File Transfer Protocol). Protocole utilisé pour transférer des fichiers sur un réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>HTTP</h2>
+            <p>Protocole de Transfert Hypertexte (HyperText Transfer Protocol). Protocole utilisé pour la transmission de données sur le web.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>HTTPS</h2>
+            <p>Protocole de Transfert Hypertexte Sécurisé (HyperText Transfer Protocol Secure). Version sécurisée du HTTP, qui chiffre les données échangées.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>IA</h2>
+            <p>Intelligence Artificielle (Artificial Intelligence). Domaine de l'informatique qui simule l'intelligence humaine dans les machines.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>ICMP</h2>
+            <p>Protocole de Message de Contrôle Internet (Internet Control Message Protocol). Utilisé pour envoyer des messages d'erreur et opérationnels.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>IDS</h2>
+            <p>Système de Détection d'Intrusion (Intrusion Detection System). Outil qui surveille le réseau pour détecter les activités malveillantes.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>IPS</h2>
+            <p>Système de Prévention d'Intrusion (Intrusion Prevention System). Outil qui non seulement détecte mais aussi bloque les activités malveillantes.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>IoT</h2>
+            <p>Internet des Objets (Internet of Things). Réseau d'objets physiques connectés à Internet, permettant la collecte et l'échange de données.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>LAN</h2>
+            <p>Réseau Local (Local Area Network). Réseau qui couvre une petite zone géographique, comme un bureau ou un bâtiment.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>ML</h2>
+            <p>Apprentissage Automatique (Machine Learning). Branche de l'intelligence artificielle qui permet aux systèmes d'apprendre et de s'améliorer automatiquement.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>NAT</h2>
+            <p>Traduction d'Adresse Réseau (Network Address Translation). Technique permettant de mapper une adresse IP publique à une adresse IP privée.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>OSPF</h2>
+            <p>Protocole de Premier Chemin Ouvert (Open Shortest Path First). Protocole de routage utilisé pour déterminer le chemin le plus court pour le trafic réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>PKI</h2>
+            <p>Infrastructure à Clé Publique (Public Key Infrastructure). Système qui permet la gestion des clés cryptographiques et des certificats numériques.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>PaaS</h2>
+            <p>Plateforme en tant que Service (Platform as a Service). Modèle de service cloud fournissant une plateforme pour développer, tester et gérer des applications.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>RAT</h2>
+            <p>Cheval de Troie d'Accès à Distance (Remote Access Trojan). Logiciel malveillant permettant le contrôle d'un ordinateur à distance.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>RDP</h2>
+            <p>Protocole de Bureau à Distance (Remote Desktop Protocol). Protocole permettant à un utilisateur de se connecter à un autre ordinateur via un réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>SaaS</h2>
+            <p>Logiciel en tant que Service (Software as a Service). Modèle de distribution de logiciel où les applications sont hébergées par un fournisseur et accessibles via Internet.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>SIEM</h2>
+            <p>Gestion des Informations et des Événements de Sécurité (Security Information and Event Management). Solutions qui collectent et analysent les données de sécurité en temps réel.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>SMTP</h2>
+            <p>Protocole Simple de Transfert de Mail (Simple Mail Transfer Protocol). Protocole standard pour l'envoi d'e-mails sur Internet.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>SSID</h2>
+            <p>Identifiant de Set de Service (Service Set Identifier). Nom d'un réseau sans fil, permettant aux utilisateurs de se connecter.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>SSL</h2>
+            <p>Couche de Sockets Sécurisée (Secure Sockets Layer). Technologie de sécurité pour établir une connexion chiffrée entre un serveur et un client.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>TCP</h2>
+            <p>Protocole de Contrôle de Transmission (Transmission Control Protocol). Protocole de communication qui assure la livraison fiable des paquets de données.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>TLS</h2>
+            <p>Sécurité de la Couche de Transport (Transport Layer Security). Protocole de sécurité qui assure la confidentialité et l'intégrité des données échangées.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>UDP</h2>
+            <p>Protocole de Datagramme Utilisateur (User Datagram Protocol). Protocole de communication qui envoie des paquets de données sans établir une connexion.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>VAPT</h2>
+            <p>Évaluation des Vulnérabilités et Tests d'Intrusion (Vulnerability Assessment and Penetration Testing). Processus d'évaluation de la sécurité d'un système.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>VLAN</h2>
+            <p>Réseau Local Virtuel (Virtual Local Area Network). Sous-réseau qui regroupe des appareils sur un réseau local indépendamment de leur emplacement physique.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>VPN</h2>
+            <p>Réseau Privé Virtuel (Virtual Private Network). Technologie qui crée une connexion sécurisée sur Internet entre un appareil et un réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>WAF</h2>
+            <p>Pare-feu d'Application Web (Web Application Firewall). Système de filtrage qui protège les applications web en surveillant et en contrôlant le trafic HTTP.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>Wi-Fi</h2>
+            <p>Fidélité Sans Fil (Wireless Fidelity). Technologie qui permet la connexion à un réseau local sans fil.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>WLAN</h2>
+            <p>Réseau Local Sans Fil (Wireless Local Area Network). Réseau local qui utilise la technologie sans fil pour la communication.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>XSS</h2>
+            <p>Script Inter-Site (Cross-Site Scripting). Type d'attaque permettant à un attaquant d'injecter des scripts malveillants dans des pages web.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>CSRF</h2>
+            <p>Falsification de Requête Inter-Site (Cross-Site Request Forgery). Type d'attaque qui permet à un attaquant d'exécuter des actions non autorisées au nom d'un utilisateur.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>QoS</h2>
+            <p>Qualité de Service (Quality of Service). Ensemble de techniques pour garantir la performance de certains services réseau.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>BGP</h2>
+            <p>Protocole de Passerelle de Frontière (Border Gateway Protocol). Protocole de routage utilisé pour échanger des informations de routage entre différents systèmes autonomes.</p>
+        </div>
+        <div class="protocol-section">
+            <h2>RDP</h2>
+            <p>Protocole de Bureau à Distance (Remote Desktop Protocol). Protocole qui permet aux utilisateurs de se connecter à des ordinateurs distants.</p>
+        </div>
+    </div>
+</body>
+</html>

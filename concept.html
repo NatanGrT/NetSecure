@@ -1,0 +1,250 @@
+<!-- concepts-generaux.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="png">
+    <title>Concepts généraux - NetSecure</title>
+    <style>
+        /* Fond de la page en dégradé uniforme */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: black; /* Changement de couleur du texte */
+            background: linear-gradient(180deg, #0072ff, #ffffff);
+            background-attachment: fixed;
+        }
+
+        /* Bande noire en haut avec menu fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0d1117;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Titre et navigation centrés dans la bande noire */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Style pour le titre du site avec logo */
+        .site-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            margin: 0;
+        }
+
+        /* Style pour le logo */
+        .site-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #00c6ff;
+        }
+
+        /* Style pour les sous-menus */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            min-width: 200px; /* Définit une largeur minimale pour les sous-menus */
+            z-index: 20; /* Assure que le sous-menu est au-dessus du contenu */
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            display: block; /* S'assure que chaque lien dans le sous-menu prend toute la largeur */
+            padding: 8px 10px; /* Un peu de remplissage pour le confort */
+            color: white; /* Couleur du texte dans les sous-menus */
+            transition: background-color 0.3s ease; /* Transition pour le survol */
+        }
+
+        .submenu li a:hover {
+            background-color: #0072ff; /* Changement de couleur au survol */
+        }
+
+        /* Style de la section principale */
+        .content {
+            max-width: 900px;
+            margin: 120px auto 50px; /* Ajustement pour la bande noire et centrage */
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9); /* Fond blanc transparent */
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles pour les titres */
+        h1 {
+            font-size: 2.2em; /* Réduit la taille du titre principal */
+            text-align: center;
+            color: #0072ff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em; /* Réduit la taille des sous-titres */
+            color: #0d1117;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Style des paragraphes */
+        p, ul {
+            font-size: 1em; /* Réduit la taille de la police des paragraphes et des listes */
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<header>
+    <div class="header-content">
+        <div class="site-title-container">
+            <!-- Logo du site -->
+            <img src="logo.png" alt="Logo de NetSecure" class="site-logo">
+            <h1 class="site-title">NetSecure</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a href="#">Connaissances</a>
+                    <ul class="submenu">
+                        <li><a href="concept.html">Concepts généraux</a></li>
+                        <li><a href="protocole.html">Protocoles réseau</a></li>
+                        <li><a href="types_connexion.html">Types de connexion</a></li>
+                        <li><a href="tech.html">Technologies de sécurité</a></li>
+                        <li><a href="type.html">Types de cyberattaques</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ip.html">Adresses IP</a>
+                    <ul class="submenu">
+                        <li><a href="calcul_masque.html">Calcul du masque</a></li>
+                        <li><a href="types_ip.html">Types d'adresses IP</a></li>
+                        <li><a href="sous_reseau.html">Sous-réseaux</a></li>
+                        <li><a href="config_ip.html">Configuration des adresses IP</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Outils</a>
+                    <ul class="submenu">
+                        <li><a href="outils.html">Outils de sécurité et d'analyse réseau</a></li>
+                        <li><a href="logiciel.html">Logiciels et outils de réseau et sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Pratiques</a>
+                    <ul class="submenu">
+                        <li><a href="bonnepra.html">Bonnes pratiques de sécurité</a></li>
+                        <li><a href="lexique.html">Lexique des abréviations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Ressources</a>
+                    <ul class="submenu">
+                        <li><a href="entreprise.html">Entreprises de technologies de réseau et de sécurité</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Appareils</a>
+                    <ul class="submenu">
+                        <li><a href="routeurs.html">Routeurs</a></li>
+                        <li><a href="switches.html">Switches</a></li>
+                        <li><a href="parefeux.html">Pare-feux</a></li>
+                        <li><a href="serveurs.html">Serveurs</a></li>
+                        <li><a href="autres-appareils.html">Autres appareils</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="content">
+        <h1>Concepts généraux</h1>
+        <p>Dans cette section, nous explorerons les concepts clés en matière de réseau et de sécurité informatique, y compris les notions fondamentales pour comprendre les enjeux et les bonnes pratiques dans ce domaine.</p>
+
+        <section>
+            <h2>Principes de base de la sécurité</h2>
+            <p>La sécurité informatique repose sur trois principaux piliers : la confidentialité, l’intégrité et la disponibilité (ou le modèle CIA en anglais).</p>
+            <ul>
+                <li><strong>Confidentialité</strong> : Protéger les données contre tout accès non autorisé.</li>
+                <li><strong>Intégrité</strong> : S’assurer que les données ne sont ni modifiées ni corrompues.</li>
+                <li><strong>Disponibilité</strong> : Garantir que les informations sont accessibles aux utilisateurs autorisés.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Réseaux informatiques</h2>
+            <p>Un réseau informatique est un ensemble d’équipements interconnectés permettant l’échange de données. Les réseaux peuvent être classés en différentes catégories :</p>
+            <ul>
+                <li><strong>Réseaux locaux (LAN)</strong> : Connectent des ordinateurs dans un espace géographique restreint.</li>
+                <li><strong>Réseaux étendus (WAN)</strong> : Relient des réseaux locaux sur de plus longues distances.</li>
+                <li><strong>Réseaux métropolitains (MAN)</strong> : Couvrent une ville ou un campus.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Types de cyberattaques</h2>
+            <p>Les cyberattaques peuvent prendre plusieurs formes, notamment :</p>
+            <ul>
+                <li><strong>Phishing</strong> : Tentatives d’hameçonnage pour obtenir des informations sensibles.</li>
+                <li><strong>Malware</strong> : Logiciels malveillants conçus pour endommager ou accéder à des systèmes.</li>
+                <li><strong>Ransomware</strong> : Logiciels de rançon qui bloquent l'accès aux données jusqu'à ce qu'une rançon soit payée.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
